@@ -1,9 +1,7 @@
-# ignore IDE/hidden/OS cache files
 .*
 *~
 .idea
 
-# ignore Composer downloads
 /vendor/*
 
 !.htaccess
