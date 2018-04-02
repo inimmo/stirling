@@ -6,6 +6,7 @@ use Stirling\Action\Foo;
 class ActionLocator
 {
     public function find(string $action) {
-        return new Foo();
+        $className = sprintf(__NAMESPACE__ . '\\Action\\%s', ucfirst($action));
+        return new $className;
     }
 }
