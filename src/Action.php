@@ -1,14 +1,14 @@
 <?php
 namespace Stirling;
 
-use Psr\Http\Message\ServerRequestInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 abstract class Action
 {
-    /** @var ServerRequestInterface */
+    /** @var Request */
     private $request;
 
-    public function setRequest(ServerRequestInterface $request): void
+    public function setRequest(Request $request): void
     {
         $this->request = $request;
     }
